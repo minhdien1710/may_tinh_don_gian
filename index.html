@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh</title>
+    <link rel="stylesheet" href="my.css">
+</head>
+<body>
+<div id="format">
+    <table align="center" border="1" cellspacing="15" style="background: darkslategray;margin-top: 100px">
+        <tr>
+            <td colspan="4">
+                <input style="width:205px;" id="display" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div id="ketqua"><input style="width: 205px" id="result" disabled></div>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="one" value="1" onclick="takeValue(document.getElementById('one').value)">1</button></td>
+            <td><button id="two" value="2" onclick="takeValue(document.getElementById('two').value)">2</button></td>
+            <td><button id="three" value="3" onclick="takeValue(document.getElementById('three').value)">3</button></td>
+            <td><button id="addition" value="+" onclick="takeValue(document.getElementById('addition').value)">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="four" value="4" onclick="takeValue(document.getElementById('four').value)">4</button></td>
+            <td><button id="five" value="5" onclick="takeValue(document.getElementById('five').value)">5</button></td>
+            <td><button id="six" value="6" onclick="takeValue(document.getElementById('six').value)">6</button></td>
+            <td><button id="subtraction" value="-" onclick="takeValue(document.getElementById('subtraction').value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="seven" value="7" onclick="takeValue(document.getElementById('seven').value)">7</button></td>
+            <td><button id="eight" value="8" onclick="takeValue(document.getElementById('eight').value)">8</button></td>
+            <td><button id="nine" value="9" onclick="takeValue(document.getElementById('nine').value)">9</button></td>
+            <td><button id="multiplication" value="*" onclick="takeValue(document.getElementById('multiplication').value)">x</button></td>
+        </tr>
+        <tr>
+            <td><button id="clear" value="" onclick="reset(document.getElementById('clear').value)">C</button></td>
+            <td><button id="zero" value="0" onclick="takeValue(document.getElementById('zero').value)">0</button></td>
+            <td><button id="product" value="=" onclick="result(document.getElementById('product').value)">=</button></td>
+            <td><button id="division" value="/" onclick="takeValue(document.getElementById('division').value)">:</button></td>
+        </tr>
+    </table>
+</div>
+    <script>
+        function takeValue(x) {
+            document.getElementById("display").value += x;
+        }
+        function reset(y) {
+            document.getElementById("display").value = y;
+            document.getElementById("result").value = y;
+            }
+        function result() {
+            var result = eval(document.getElementById("display").value);
+            document.getElementById("result").value = result;
+        }
+    </script>
+
+
+</body>
+</html>
